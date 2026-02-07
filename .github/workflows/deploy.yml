@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - develop
+      - dev
 
 jobs:
   web-deploy:
@@ -38,7 +38,7 @@ jobs:
           server-dir: /public_html/ 
 
       - name: 📂 Sync files (Development)
-        if: github.ref == 'refs/heads/develop' # O 'dev' si tu rama se llama así
+        if: github.ref == 'refs/heads/dev' 
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
