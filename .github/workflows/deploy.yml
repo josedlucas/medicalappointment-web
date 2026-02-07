@@ -1,0 +1,50 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+
+jobs:
+  web-deploy:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: 📦 Install dependencies
+        run: |
+          cd web-app
+          npm ci
+
+      - name: 🏗️ Build project
+        run: |
+          cd web-app
+          npm run build
+
+      - name: 📂 Sync files (Production)
+        if: github.ref == 'refs/heads/main'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/ 
+
+      - name: 📂 Sync files (Development)
+        if: github.ref == 'refs/heads/develop' # O 'dev' si tu rama se llama así
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /dev.vitarecord.com/ 
