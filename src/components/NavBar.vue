@@ -36,8 +36,8 @@ const isMenuOpen = ref(false)
       <nav class="flex flex-col p-6 gap-4">
         <a class="text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors" href="#">Inicio</a>
         <a class="text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors" href="#">Servicios</a>
-        <a class="text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors" href="#">Especialistas</a>
-        <a class="text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors" href="#">Seguros</a>
+        <a class="text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors" href="#">Precios</a>
+        <a class="text-sm font-bold text-gray-700 dark:text-gray-200 hover:text-primary transition-colors" href="#">Contacto</a>
         <button class="bg-primary text-white w-full py-3 rounded-xl font-bold text-sm shadow-lg shadow-primary/20 hover:bg-blue-700 transition-all mt-2">
           Portal Paciente
         </button>

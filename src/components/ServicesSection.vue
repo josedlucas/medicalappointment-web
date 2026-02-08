@@ -1,50 +1,68 @@
 <template>
-  <section class="bg-white dark:bg-gray-900/30 py-24">
-    <div class="max-w-7xl mx-auto px-6">
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-        <div class="max-w-2xl">
-          <h2 class="text-4xl font-black tracking-tight text-gray-900 dark:text-white mb-4">Servicios Médicos Especializados</h2>
-          <p class="text-lg text-gray-500">Ofrecemos un ecosistema de salud completo diseñado para tu comodidad y bienestar.</p>
-        </div>
-        <button class="text-primary font-bold flex items-center gap-2 group">
-          Ver todos los servicios 
-          <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-        </button>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        <div class="group p-8 rounded-3xl border border-gray-100 dark:border-gray-800 bg-[#f8f9fc] dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 hover:shadow-xl hover:border-primary/20 transition-all">
-          <div class="size-14 rounded-2xl bg-blue-100 dark:bg-blue-900/40 text-primary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <span class="material-symbols-outlined text-3xl">video_chat</span>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Telemedicina</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">Consulta con especialistas desde cualquier lugar a través de nuestra plataforma segura.</p>
-          <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">Saber más <span class="material-symbols-outlined text-sm">chevron_right</span></a>
-        </div>
-        <div class="group p-8 rounded-3xl border border-gray-100 dark:border-gray-800 bg-[#f8f9fc] dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 hover:shadow-xl hover:border-primary/20 transition-all">
-          <div class="size-14 rounded-2xl bg-green-100 dark:bg-green-900/40 text-green-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <span class="material-symbols-outlined text-3xl">stethoscope</span>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Especialidades</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">Más de 30 especialidades médicas con los equipos tecnológicos más avanzados.</p>
-          <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">Saber más <span class="material-symbols-outlined text-sm">chevron_right</span></a>
-        </div>
-        <div class="group p-8 rounded-3xl border border-gray-100 dark:border-gray-800 bg-[#f8f9fc] dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800 hover:shadow-xl hover:border-primary/20 transition-all">
-          <div class="size-14 rounded-2xl bg-purple-100 dark:bg-purple-900/40 text-purple-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <span class="material-symbols-outlined text-3xl">biotech</span>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Laboratorio</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">Resultados rápidos y precisos con entrega digital directamente en tu perfil.</p>
-          <a class="text-primary font-bold text-sm inline-flex items-center gap-1" href="#">Saber más <span class="material-symbols-outlined text-sm">chevron_right</span></a>
-        </div>
-        <div class="group p-8 rounded-3xl border border-gray-100 dark:border-gray-800 bg-red-50/30 dark:bg-red-900/10 hover:bg-white dark:hover:bg-gray-800 hover:shadow-xl hover:border-red-200 transition-all">
-          <div class="size-14 rounded-2xl bg-red-100 dark:bg-red-900/40 text-red-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
-            <span class="material-symbols-outlined text-3xl">e911_emergency</span>
-          </div>
-          <h3 class="text-xl font-bold mb-3">Urgencias</h3>
-          <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed mb-6">Atención inmediata las 24 horas del día, los 7 días de la semana, sin cita previa.</p>
-          <a class="text-red-600 font-bold text-sm inline-flex items-center gap-1" href="#">Ver sedes <span class="material-symbols-outlined text-sm">chevron_right</span></a>
-        </div>
-      </div>
-    </div>
-  </section>
+  <section class="bg-white dark:bg-gray-900 py-16 px-4">
+            <div class="max-w-7xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Nuestros Servicios</h2>
+                    <p class="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                        Ofrecemos una plataforma integral para cubrir todas tus necesidades médicas de forma digital y
+                        segura.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Service 1 -->
+                    <div
+                        class="group p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-300 shadow-sm hover:shadow-xl"
+                    >
+                        <div
+                            class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform"
+                        >
+                            <span class="material-symbols-outlined text-3xl">videocam</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Telemedicina</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                            Consultas virtuales con especialistas desde la comodidad de tu hogar, sin esperas ni
+                            desplazamientos.
+                        </p>
+                        <a class="inline-flex items-center gap-1 text-primary font-bold text-sm" href="#">
+                            Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Service 2 -->
+                    <div
+                        class="group p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-300 shadow-sm hover:shadow-xl"
+                    >
+                        <div
+                            class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform"
+                        >
+                            <span class="material-symbols-outlined text-3xl">clinical_notes</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Historia Clínica</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                            Acceso inmediato a todo tu historial, recetas y exámenes, protegidos bajo los más altos
+                            estándares.
+                        </p>
+                        <a class="inline-flex items-center gap-1 text-primary font-bold text-sm" href="#">
+                            Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                    <!-- Service 3 -->
+                    <div
+                        class="group p-8 rounded-2xl bg-background-light dark:bg-background-dark border border-gray-100 dark:border-gray-800 hover:border-primary transition-all duration-300 shadow-sm hover:shadow-xl"
+                    >
+                        <div
+                            class="size-14 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform"
+                        >
+                            <span class="material-symbols-outlined text-3xl">calendar_month</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-3">Gestión de Citas</h3>
+                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">
+                            Agenda, reprograma o cancela citas en segundos con recordatorios automáticos en tu móvil.
+                        </p>
+                        <a class="inline-flex items-center gap-1 text-primary font-bold text-sm" href="#">
+                            Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
 </template>
